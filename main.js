@@ -11,7 +11,7 @@ function addTask() {
         isDelete : false
     }
     taskList.push(task);
-    console.log(task);
+    taskInput.value = "";
     render();
 }
 
