@@ -1,0 +1,15 @@
+html, body, h1, div { margin:0; }
+ul, li {list-style: none; margin:0; padding:0;}
+body { background:#e7e7e7; }
+.container { width:1000px; margin:0 auto; min-height: 100vh; padding:50px 0; font-size:20px;}
+h1 {text-align: center;}
+.input-area { background:#fff; padding:50px 100px; margin: 30px auto; display: flex; justify-content: space-between; }
+.input-area input {width:75%;}
+.input-area button {width: 22%;}
+.input-area > * {line-height: 40px; border:1px solid #c9c9c9; font-size:20px;}
+.task-tabs ul {display: flex; border-bottom:1px solid #c9c9c9; width: fit-content; margin:0 auto;}
+.task-tabs li { padding:15px 40px; color:#c9c9c9;}
+.task-tabs li.on { border-bottom:2px solid #111; margin-bottom:-1px; color:#111;}
+.task { padding: 10px 100px; background: #fff; display: flex; align-items: center; justify-content: space-between; margin-top: 15px;}
+.task.done {background:#ddd;}
+.task.done p {text-decoration: line-through; color:#a2a2a2;}
