@@ -4,15 +4,17 @@ let taskList = [];
 addButton.addEventListener("click", addTask);
 
 function addTask() {
-    let task = {
-        id:randomIDGenerate(),
-        taskContent : taskInput.value,
-        isComplete : false,
-        isDelete : false
+    if (taskInput.value != "" ) {
+        let task = {
+            id:randomIDGenerate(),
+            taskContent : taskInput.value,
+            isComplete : false,
+            isDelete : false
+        }
+        taskList.push(task);
+        taskInput.value = "";
+        render();
     }
-    taskList.push(task);
-    taskInput.value = "";
-    render();
 }
 
 function render() {
