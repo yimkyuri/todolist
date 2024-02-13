@@ -23,7 +23,7 @@ function render() {
                 <p>${taskList[i].taskContent}</p>
                 <div class="button-area">
                     <button onclick="toggleComplete('${taskList[i].id}')">Check</button>
-                    <button onclick="">Delete</button>
+                    <button onclick="deleteTask('${taskList[i].id}')">Delete</button>
                 </div>
             </div>`
             } else {
