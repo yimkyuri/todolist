@@ -1,15 +1,21 @@
 html, body, h1, div { margin:0; }
 ul, li {list-style: none; margin:0; padding:0;}
-body { background:#e7e7e7; }
+button {border:0; background:none;}
+input {outline: none;}
+body { background:#f0f0f0; }
 .container { width:1000px; margin:0 auto; min-height: 100vh; padding:50px 0; font-size:20px;}
 h1 {text-align: center;}
-.input-area { background:#fff; padding:50px 100px; margin: 30px auto; display: flex; justify-content: space-between; }
-.input-area input {width:75%;}
-.input-area button {width: 22%;}
-.input-area > * {line-height: 40px; border:1px solid #c9c9c9; font-size:20px;}
+.input-area { background:#fff; padding:50px 100px; margin: 30px auto; display: flex; justify-content: space-between; border-radius: 20px; box-shadow: 3px 3px 6px rgba(0,0,0,0.05);}
+.input-area input {width:calc(75% - 60px); background:#ebf1f5; border-radius: 50px; padding:0 30px;}
+.input-area button {width: 22%; background:#3d79b1; border-radius: 50px; color:#fff;}
+.input-area > * {line-height: 50px; border:0; font-size:20px;}
+.task-tabs {width:fit-content; margin:0 auto 30px; position:relative;}
 .task-tabs ul {display: flex; border-bottom:1px solid #c9c9c9; width: fit-content; margin:0 auto;}
-.task-tabs li { padding:15px 40px; color:#c9c9c9;}
-.task-tabs li.on { border-bottom:2px solid #111; margin-bottom:-1px; color:#111;}
-.task { padding: 10px 100px; background: #fff; display: flex; align-items: center; justify-content: space-between; margin-top: 15px;}
-.task.done {background:#ddd;}
+.task-tabs li { padding:15px 40px; cursor: pointer;}
+
+#underline { background: #3d79b1; height: 3px; position: absolute; bottom: 0; left: 0px; width: 115px; transition: 0.5s; z-index: 2;}
+
+.task { padding: 10px 100px; background: #fff; display: flex; align-items: center; justify-content: space-between; margin-bottom: 15px; border-radius: 20px; box-shadow: 3px 3px 6px rgba(0,0,0,0.05);}
+.task.done {background:#e4e4e4; box-shadow: none;}
 .task.done p {text-decoration: line-through; color:#a2a2a2;}
+.task button i {font-size:19px;}
