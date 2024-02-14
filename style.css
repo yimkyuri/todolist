@@ -1,6 +1,6 @@
 html, body, h1, div { margin:0; }
 ul, li {list-style: none; margin:0; padding:0;}
-button {border:0; background:none;}
+button {border:0; background:none; cursor: pointer;}
 input {outline: none;}
 body { background:#f0f0f0; }
 .container { width:1000px; margin:0 auto; min-height: 100vh; padding:50px 0; font-size:20px;}

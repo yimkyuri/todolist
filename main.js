@@ -27,7 +27,7 @@ function addTask() {
             isComplete : false
         }
         taskList.push(task);
-        render();
+        filter();
         taskInput.value = "";
     }
 }
