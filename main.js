@@ -42,20 +42,22 @@ function render() {
     }
     for(let i=0; i<list.length; i++) {
         if(list[i].isComplete == true) {
-            resultHTML +=`<div class="task done" id="${list[i].id}">
-                <p>${list[i].taskContent}</p>
-                <div class="button-area">
-                    <button onclick="toggleComplete('${list[i].id}')"><i class="fa-regular fa-circle-check"></i></button>
-                    <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash-can"></i></button>
+            resultHTML +=`
+            <div class="task done" id="${list[i].id}">
+                <div class="button-area" onclick="toggleComplete('${list[i].id}')">
+                    <button><i class="fa-regular fa-circle-check"></i></button>
+                    <p>${list[i].taskContent}</p>
                 </div>
+                <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash-can"></i></button>
             </div>`
             } else {
-            resultHTML += `<div class="task" id="${list[i].id}">
-                <p>${list[i].taskContent}</p>
-                <div class="button-area">
-                    <button onclick="toggleComplete('${list[i].id}')"><i class="fa-regular fa-circle"></i></button>
-                    <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash-can"></i></button>
+            resultHTML += `
+            <div class="task" id="${list[i].id}">
+                <div class="button-area" onclick="toggleComplete('${list[i].id}')">
+                    <button><i class="fa-regular fa-circle"></i></button>
+                    <p>${list[i].taskContent}</p>
                 </div>
+                <button onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash-can"></i></button>
             </div>`
         }
     }
